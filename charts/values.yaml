@@ -1,0 +1,21 @@
+namespace: default
+
+image:
+  repository: ghcr.io/devops-estudos/contacts
+  tag: latest
+  pullPolicy: Always
+
+replicaCount: 1
+
+service:
+  type: LoadBalancer
+  externalPort: 80
+  internalPort: 3000
+
+resources:
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
